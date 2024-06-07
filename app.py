@@ -123,10 +123,7 @@ def logout():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-        new_product = Product(name='Conjunto', price=25.99, description='Conjunto de algodón', image_file='images/prenda2.png')
-        db.session.add(new_product)
-        # Confirma los cambios en la base de datos
-        db.session.commit()     
+         
     app.run(host='localhost', port=5000, debug=True)
 
 
